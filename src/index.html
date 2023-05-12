@@ -1,0 +1,106 @@
+<!-- Griffin Parker
+February 4, 2023
+Pokemon API
+I worked on this as much as I could, but I was busy with my son over the weekend
+The location API was also not working. It would display correctly in postman, but the exact same URL would pull up something completely different
+and useless in my program
+I gave up on the favorites and responsiveness in the time I had left
+
+Notes:
+Make evolution chain into buttons so you can select the next one in line
+Put branching path pokemon in the middle of the evo chain section with the two evolutions flanking the baby in the middle
+Add dummy so you can select an attack to use to test the pokemon's stats
+Make any move pokemon battling, where two pokemon fight while having access to all of their moveset -->
+
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pokédex</title>
+  <link rel="stylesheet" href="./styles/style.css">
+  <link href="/dist/output.css" rel="stylesheet">
+</head>
+
+<body class="body background">
+
+  <div class="flex flex-row ml-4 ">
+    <div class="container pokeContainer normalBG"></div>
+    <img class="pokeBG" src="" id="pokeBG"></img>
+    <input id="pokeInput" class="pokeInput" placeholder="  Pokemon name or ID#">
+    <button type="button" class="searchButton" id="submitBtn"><b
+        class="text-3xl font-bold underline">Submit</b></button>
+    <button type="button" class="randomButton" id="randomBtn"><b class="text-3xl font-bold underline"><img
+          src="/src/Assets/Unknown.png" class="w-36 h-13 pointer-events-none"></b></button>
+    <button type="button" class="shinyButton" id="shinyBtn"><b id="shinyText">Make Shiny</b></button>
+    <!-- <button type="button" class="ml-3" id="favoritesBtn"><b id="">Favorites</b></button> -->
+    <!-- <h1 class="pokeLocation" id="pokeLocation">Location</h1> -->
+    <button type="button" class="upButton" id="upBtn"><b id="upText"><img class="rotate-180"
+          src="/src/Assets/ArrowBall.png"></b></button>
+    <button type="button" class="downButton" id="downBtn"><b id="downText"><img
+          src="/src/Assets/ArrowBall.png"></b></button>
+    <h2 class="name" id="pokemonName">Bulbasaur</h2>
+    <h1 class="number text-center" id="pokemonNumber">#1</h1>
+  </div>
+  <div class="flex flex-row">
+    <img src="" class="mainSprite" alt="" id="sprite">
+    <!-- <img src="" class = "mainBackSprite" alt="" id="backSprite"> -->
+  </div>
+  <!-- <div class="grid grid-cols-5"></div> -->
+  <div class="relative moveList">
+    <button class="bg-white text-gray-700 font-medium py-2 px-4 rounded-lg" id="moveBtn">Move List</button>
+    <div class=" absolute right-0 mt-2 w-56 rounded-md shadow-lg">
+      <div class="hidden" id="moveDisplay">
+
+        <div class="py-1">
+          <div id="moveList" class=""></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container flex">
+
+    <h2 id="pokeGenus" class="pokeGenus">Pokemon Genus</h2>
+    <h1 id="firstAbility" class="firstAbility">First Ability</h1>
+    <h1 id="secondAbility" class="secondAbility"></h1>
+    <h1 id="thirdAbility" class="thirdAbility"></h1>
+    <!-- <h5 id="pokeEntry"></h5> -->
+
+    <div class="flex flex-row justify-center">
+      <div class="bg-slate-300 bg-gradient-to-t whiteBackground"></div>
+    </div>
+    <img src="" alt="" class="type1" id="type1">
+    <img src="" alt="" class="type2" id="type2">
+  </div>
+    <div class="container" style="margin-left: -150px;">
+      <!-- <div class="col-5"></div> -->
+        <!-- <div class="col-7"> -->
+
+        <!-- <div class="row">
+
+          <h3 class="evoHeader">Evolution</h1>
+        </div> -->
+        <div class="row">
+
+            <h3 class="firstEvolutionName" id="firstEvolutionName"></h3>
+            <img src="" alt="" class="firstEvolution" id="firstEvolution">
+          </div>
+          <div class="row">
+
+            <h3 class="secondEvolutionName" id="secondEvolutionName"></h3>
+            <img src="" alt="" class="secondEvolution" id="secondEvolution">
+          </div>
+          <div class="row">
+
+            <h3 class="thirdEvolutionName" id="thirdEvolutionName"></h3>
+            <img src="" alt="" class="thirdEvolution" id="thirdEvolution">
+          </div>
+        <!-- </div> -->
+
+    </div>
+  <script src="./scripts/app.js"></script>
+  <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script> -->
+</body>
+
+</html>
