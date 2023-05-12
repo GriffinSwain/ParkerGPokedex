@@ -166,22 +166,24 @@
 .firstEvolutionName {
     position: absolute;
     font-size: x-large;
-    margin-left: -98vw;
-    margin-top: 10vh;
+    /* margin-left: 0%; */
+    left: -54%;
+    top: 50%;
+    /* margin-top: 10vh; */
 }
 
 .secondEvolutionName {
     position: absolute;
     font-size: x-large;
-    margin-left: 139vw;
-    margin-top: 10vh;
+    left: -74%;
+    top: 50%;
 }
 
 .thirdEvolutionName {
     position: absolute;
     font-size: x-large;
-    margin-left: 180vw;
-    margin-top: 10vh;
+    left: -94%;
+    top: 50%;
 }
 
 .firstEvolution {
